@@ -23,7 +23,7 @@ export default class TodosList extends Component {
 
 
   componentDidMount() {
-    axios.get(`${process.env.REACT_APP_API_URL}todos/`)
+    axios.get(`${process.env.REACT_APP_API_URL}/todos/`)
       .then(response => {
         this.setState({ todos: response.data });
       })

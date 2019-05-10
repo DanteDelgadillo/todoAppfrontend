@@ -15,7 +15,7 @@ export default class EditToDIList extends Component {
     this.onChangeCompleted = this.onChangeCompleted.bind(this);
   }
   componentDidMount() {
-    axios.get("http://localhost:4000/todos/" + this.props.match.params.id)
+    axios.get(`${process.env.REACT_APP_API_URL}/todos/` + this.props.match.params.id)
       .then(response => {
         this.setState({
           todoDescription: response.data.todoDescription,
@@ -61,7 +61,7 @@ export default class EditToDIList extends Component {
       todoPriority: this.state.todoPriority,
       todoCompleted: this.state.todoCompleted,
     }
-    axios.put("http://localhost:4000/todos/update/" + this.props.match.params.id, object)
+    axios.put(`${process.env.REACT_APP_API_URL}/todos/update/` + this.props.match.params.id, object)
       .then(res => console.log(res.data))
       .catch(function (error) {
         console.log(error);

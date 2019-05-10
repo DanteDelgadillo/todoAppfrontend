@@ -33,7 +33,7 @@ export default class CreatetoDoList extends Component {
       todoPriority: this.state.todoPriority,
       todoCompleted: this.state.todoCompleted,
     }
-    axios.post("http://localhost:4000/todos/add", newTodo)
+    axios.post(`${process.env.REACT_APP_API_URL}/todos/add`, newTodo)
       .then(res => console.log(res.data));
     this.setState({
       todoDescription: "",

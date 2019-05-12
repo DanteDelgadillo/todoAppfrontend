@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbarcolor navbar navbar-expand-lg navbar-light">
           {/* <a className="navbar-brand"> */}
           <img src={Logo} width="50" height="50" alt="logo" />
           {/* </a> */}
@@ -29,7 +29,7 @@ function App() {
           </div>
         </nav>
 
-        <h2>Mern Stack to do app</h2>
+
         <Route path="/" exact component={TodoList} />
         <Route path="/edit/:id" component={EditTodo} />
         <Route path="/create" component={CreateToDo} />

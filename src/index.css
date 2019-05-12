@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(194,238,255,1) !important;
 }
 
 code {
@@ -15,3 +16,9 @@ code {
 .completed{
   text-decoration: line-through;
 }
+
+
+.images{
+  height: 33px;
+}
+

@@ -54,19 +54,19 @@ export default class CreatetoDoList extends Component {
   render() {
     return (
       <div style={{ marginTop: 20 }}>
-        <h3>Create New Todo </h3>
+        <h3 className="fontstyle">Create New Todo </h3>
         <form onSubmit={this.onClick}>
           <div className="form-group">
-            <label>Description:</label>
+            <label className="fontstyle">Description:</label>
             <input type="text"
               name="todoDescription"
-              className="form-control"
+              className="form-control "
               value={this.state.todoDescription}
               onChange={this.onChange}
             />
           </div>
           <div className="form-group">
-            <label>Responsibility:</label>
+            <label className="fontstyle">Responsibility:</label>
             <input type="text"
               name="todoResponsibility"
               className="form-control"
@@ -84,7 +84,7 @@ export default class CreatetoDoList extends Component {
                 checked={this.state.todoPriority === "Low"}
                 onChange={this.onChangeTodoPriority}
               />
-              <label className="form-control-label">Low</label>
+              <label className="form-control-label fontstyle">Low</label>
             </div>
             <div className="form-check form-check-inline">
               <input className="form-check-input"
@@ -95,7 +95,7 @@ export default class CreatetoDoList extends Component {
                 checked={this.state.todoPriority === "Medium"}
                 onChange={this.onChangeTodoPriority}
               />
-              <label className="form-control-label">Medium</label>
+              <label className="form-control-label fontstyle">Medium</label>
             </div>
             <div className="form-check form-check-inline">
               <input className="form-check-input"
@@ -106,11 +106,11 @@ export default class CreatetoDoList extends Component {
                 checked={this.state.todoPriority === "High"}
                 onChange={this.onChangeTodoPriority}
               />
-              <label className="form-control-label">High</label>
+              <label className="form-control-label fontstyle">High</label>
             </div>
           </div>
           <div className="form-group">
-            <input type="submit" value="Create ToDo" className="btn btn-primary" />
+            <input type="submit" value="Create ToDo" className="btn btn-primary fontstyle" />
           </div>
         </form>
       </div>

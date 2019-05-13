@@ -25,3 +25,8 @@ code {
 .addImage{
   height: 25px;
 }
+
+.fontstyle{
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 35px
+}

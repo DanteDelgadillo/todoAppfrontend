@@ -5,15 +5,16 @@ import CreateToDo from "./Components/CreatetoDoList";
 import EditTodo from "./Components/EditToDIList";
 import TodoList from "./Components/TodosList";
 import Logo from "./logo.svg";
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <Router>
       <div className="container">
-        <nav className="navbarcolor navbar navbar-expand-lg navbar-light">
-          {/* <a className="navbar-brand"> */}
+        <navbar className="navbarcolor navbar navbar-expand-lg navbar-light">
+
           <img src={Logo} width="50" height="50" alt="logo" />
-          {/* </a> */}
+
           <Link to="/" className="nav-link">
             Todo List
           </Link>
@@ -27,7 +28,8 @@ function App() {
 
             </ul>
           </div>
-        </nav>
+        </navbar>
+        <Navbar />
 
 
         <Route path="/" exact component={TodoList} />

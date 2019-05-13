@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 export default class EditToDoList extends Component {
@@ -62,7 +63,7 @@ export default class EditToDoList extends Component {
       todoCompleted: this.state.todoCompleted,
     }
     axios.put(`${process.env.REACT_APP_API_URL}todos/update/` + this.props.match.params.id, object)
-      .then(res => console.log(res.data))
+      .then(res => console.log(res.data), Swal.fire("Updated to do!", "", "success"), setTimeout(function () { window.location.href = "/" }, 1000))
       .catch(function (error) {
         console.log(error);
       })

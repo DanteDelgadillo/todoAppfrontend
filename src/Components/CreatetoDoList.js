@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Swal from "sweetalert2";
 export default class CreatetoDoList extends Component {
   constructor() {
     super();
@@ -34,7 +34,8 @@ export default class CreatetoDoList extends Component {
       todoCompleted: this.state.todoCompleted,
     }
     axios.post(`${process.env.REACT_APP_API_URL}todos/add`, newTodo)
-      .then(res => console.log(res.data));
+      .then(res => console.log(res.data), Swal.fire("Created to do!", "", "success"), setTimeout(function () { window.location.href = "/" }, 1000));
+
     this.setState({
       todoDescription: "",
       todoResponsibility: "",

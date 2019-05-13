@@ -5,6 +5,7 @@ import Pen from "../images/edit_pen.png";
 import Trash from "../images/delete_trash.png";
 import Circle from "../images/circle.png";
 import CheckCircle from "../images/ok_circle_128_A0_Rectangle_14_pattern.png"
+import AddImage from "../images/add.png"
 
 const Todo = props => (
   <tr >
@@ -99,12 +100,12 @@ export default class TodosList extends Component {
   render() {
     return (
       <div>
-        <h3>Todos List</h3>
+        <h3>Todos List:</h3>
         <div className="table-responsive">
           <table className="table table-primary table-striped shadow " style={{ marginTop: 20 }}>
             <thead >
               <tr >
-                <th></th>
+                <th>  <Link to="/create" className=""> <button className="btn  my-2 my-sm-0" type="submit"><img src={AddImage} alt="add" className="images" /></button></Link></th>
                 <th>Description</th>
                 <th>Responsibility</th>
                 <th>Priority</th>

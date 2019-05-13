@@ -19,10 +19,6 @@ export default class Navbar extends Component {
                             </li>
                             <li> </li>
                         </ul>
-
-                        <Link to="/create" className="nav-link"> <button className="btn btn-outline-info my-2 my-sm-0" type="submit"><img src={AddImage} alt="add" className="images" /></button></Link>
-
-
                     </div>
                 </nav>
 

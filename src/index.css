@@ -53,3 +53,16 @@ code {
   
   
 }
+
+@media (max-width: 1024px) {
+  .container1{
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: #7abaff;
+    width: 90%;
+    margin: 0 auto;
+    
+    
+  }
+}

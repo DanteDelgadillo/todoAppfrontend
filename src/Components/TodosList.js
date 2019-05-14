@@ -24,7 +24,7 @@ export default class TodosList extends Component {
   constructor() {
     super();
     this.state = {
-      todosObjects: {},
+      todosObjectId: "",
       todos: []
     }
   }
@@ -50,7 +50,10 @@ export default class TodosList extends Component {
 
 
       }
-
+      // console.log(todo)
+      // this.setState({
+      //   todosObjects: todo
+      // })
       return {
         ...todo,
         todoCompleted: !todo.todoCompleted,
@@ -64,7 +67,26 @@ export default class TodosList extends Component {
 
     this.setState({
       todos: newTodos,
-      // todosObjects: todo
+      todosObjectId: todoid
+    }, () => {
+      const id = this.state.todosObjectId;
+      const updateTodo = this.state.todos.find(todo => todo._id === id);
+
+      const updateTodoObject = {
+        todoDescription: updateTodo.todoDescription,
+        todoResponsibility: updateTodo.todoResponsibility,
+        todoPriority: updateTodo.todoPriority,
+        todoCompleted: updateTodo.todoCompleted,
+
+      }
+
+
+      axios.put(`${process.env.REACT_APP_API_URL}todos/update/` + id, updateTodoObject)
+        .then(res => console.log(res.data))
+        .catch(function (error) {
+          console.log(error);
+        })
+
     })
     // console.log(newTodos)
     // axios.put(`${process.env.REACT_APP_API_URL}todos/update/` + todoid,this.state.todosObjects)
@@ -72,8 +94,14 @@ export default class TodosList extends Component {
     //   .catch(function (error) {
     //     console.log(error);
     //   })
+    // this.updateToggle(todoid)
 
-
+  }
+  updateToggle(todoid) {
+    // console.log(this.state.todos);
+    // console.log(todoid)
+    const updtateTodo = this.state.todos.find(todo => todo._id === todoid);
+    console.log(updtateTodo)
   }
 
   deletetodo(todoid) {

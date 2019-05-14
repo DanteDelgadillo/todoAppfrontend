@@ -28,5 +28,28 @@ code {
 
 .fontstyle{
   font-family: 'Nanum Pen Script', cursive;
-  font-size: 35px
+  font-size: 40px 
+}
+
+.fontstyle2{
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 30px 
+}
+
+.buttonFont{
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 25px;
+  color: black
+  
+}
+
+.container1{
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #7abaff;
+  width: 50%;
+  margin: 0 auto;
+  
+  
 }

@@ -53,11 +53,11 @@ export default class CreatetoDoList extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: 20 }}>
-        <h3 className="fontstyle">Create New Todo </h3>
+      <div style={{ marginTop: 20 }} className="container1 shadow">
+        <h3 className="fontstyle2">Create New Todo: </h3>
         <form onSubmit={this.onClick}>
           <div className="form-group">
-            <label className="fontstyle">Description:</label>
+            <label className="fontstyle2">Description:</label>
             <input type="text"
               name="todoDescription"
               className="form-control "
@@ -66,7 +66,7 @@ export default class CreatetoDoList extends Component {
             />
           </div>
           <div className="form-group">
-            <label className="fontstyle">Responsibility:</label>
+            <label className="fontstyle2">Responsibility:</label>
             <input type="text"
               name="todoResponsibility"
               className="form-control"
@@ -84,7 +84,7 @@ export default class CreatetoDoList extends Component {
                 checked={this.state.todoPriority === "Low"}
                 onChange={this.onChangeTodoPriority}
               />
-              <label className="form-control-label fontstyle">Low</label>
+              <label className="form-control-label fontstyle2">Low</label>
             </div>
             <div className="form-check form-check-inline">
               <input className="form-check-input"
@@ -95,7 +95,7 @@ export default class CreatetoDoList extends Component {
                 checked={this.state.todoPriority === "Medium"}
                 onChange={this.onChangeTodoPriority}
               />
-              <label className="form-control-label fontstyle">Medium</label>
+              <label className="form-control-label fontstyle2">Medium</label>
             </div>
             <div className="form-check form-check-inline">
               <input className="form-check-input"
@@ -106,11 +106,11 @@ export default class CreatetoDoList extends Component {
                 checked={this.state.todoPriority === "High"}
                 onChange={this.onChangeTodoPriority}
               />
-              <label className="form-control-label fontstyle">High</label>
+              <label className="form-control-label fontstyle2">High</label>
             </div>
           </div>
           <div className="form-group">
-            <input type="submit" value="Create ToDo" className="btn btn-primary fontstyle" />
+            <input type="submit" value="Create ToDo" className="btn btn-primary buttonFont" />
           </div>
         </form>
       </div>

@@ -10,9 +10,9 @@ import AddImage from "../images/add.png"
 const Todo = props => (
   <tr >
     <td><button type="button" className="btn" onClick={() => props.toggleTodo(props.todo._id)} ><img src={props.todo.todoCompleted ? CheckCircle : Circle} className="images" alt="Circle" /></button></td>
-    <td className={props.todo.todoCompleted ? "completed fontstyle" : "fontstyle"}>{props.todo.todoDescription}</td>
-    <td className={props.todo.todoCompleted ? "completed fontstyle" : "fontstyle"}>{props.todo.todoResponsibility}</td>
-    <td className={props.todo.todoCompleted ? "completed fontstyle" : " fontstyle"}>{props.todo.todoPriority}</td>
+    <td className={props.todo.todoCompleted ? "completed fontstyle2" : "fontstyle2"}>{props.todo.todoDescription}</td>
+    <td className={props.todo.todoCompleted ? "completed fontstyle2" : "fontstyle2"}>{props.todo.todoResponsibility}</td>
+    <td className={props.todo.todoCompleted ? "completed fontstyle2" : " fontstyle2"}>{props.todo.todoPriority}</td>
     <td>
       <Link to={"/edit/" + props.todo._id}> <img src={Pen} className="images" alt="pen" /></Link>
     </td>

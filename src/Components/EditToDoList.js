@@ -72,11 +72,11 @@ export default class EditToDoList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container1 shadow">
         <h3 className="fontstyle"> Update to dos</h3>
         <form onSubmit={this.onClick}>
           <div className="form-group">
-            <label className="fontstyle">Description</label>
+            <label className="fontstyle2">Description</label>
             <input type="text"
               className="form-control"
               name="todoDescription"
@@ -84,7 +84,7 @@ export default class EditToDoList extends Component {
               onChange={this.onChange} />
           </div>
           <div className="form-group">
-            <label className="fontstyle">Responsibility</label>
+            <label className="fontstyle2">Responsibility</label>
             <input type="text"
               className="form-control"
               name="todoResponsibility"
@@ -100,7 +100,7 @@ export default class EditToDoList extends Component {
               checked={this.state.todoPriority === "Low"}
               onChange={this.onChangeTodoPriority}
             />
-            <label className="form-control-label fontstyle">Low</label>
+            <label className="form-control-label fontstyle2">Low</label>
           </div>
           <div className="form-check form-check-inline">
             <input className="form-check-input"
@@ -111,7 +111,7 @@ export default class EditToDoList extends Component {
               checked={this.state.todoPriority === "Medium"}
               onChange={this.onChangeTodoPriority}
             />
-            <label className="form-control-label fontstyle" >Medium</label>
+            <label className="form-control-label fontstyle2" >Medium</label>
           </div>
           <div className="form-check form-check-inline">
             <input className="form-check-input"
@@ -122,7 +122,7 @@ export default class EditToDoList extends Component {
               checked={this.state.todoPriority === "High"}
               onChange={this.onChangeTodoPriority}
             />
-            <label className="form-control-label fontstyle">High</label>
+            <label className="form-control-label fontstyle2">High</label>
           </div>
           <div className="form-check">
             <input type="checkbox"
@@ -133,13 +133,13 @@ export default class EditToDoList extends Component {
               checked={this.state.todoCompleted}
               value={this.state.todoCompleted}
             />
-            <label className="form-check-label fontstyle" htmlFor="completedCheckbox">
+            <label className="form-check-label fontstyle2" htmlFor="completedCheckbox">
               Completed
           </label>
           </div>
           <br />
           <div className="form-group">
-            <input type="submit" value="Update Todo" className="btn btn-primary fontstyle" />
+            <input type="submit" value="Update Todo" className="btn btn-primary buttonFont" />
           </div>
         </form>
       </div>

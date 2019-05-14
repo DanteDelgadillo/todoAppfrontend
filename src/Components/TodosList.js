@@ -88,21 +88,9 @@ export default class TodosList extends Component {
         })
 
     })
-    // console.log(newTodos)
-    // axios.put(`${process.env.REACT_APP_API_URL}todos/update/` + todoid,this.state.todosObjects)
-    //   .then(res => console.log(res.data))
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   })
-    // this.updateToggle(todoid)
 
   }
-  updateToggle(todoid) {
-    // console.log(this.state.todos);
-    // console.log(todoid)
-    const updtateTodo = this.state.todos.find(todo => todo._id === todoid);
-    console.log(updtateTodo)
-  }
+
 
   deletetodo(todoid) {
     const newTodos = this.state.todos.filter(todo => todo._id !== todoid)
